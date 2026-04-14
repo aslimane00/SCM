@@ -15,8 +15,8 @@ The goal of this project is to:
 
 ### Topic 701: Software Engineering
 - [x] **701.1 Modern Software Development:** Concepts of Agile, Lean, and CI/CD.
-- [] **701.2 Standard Components and Platforms:** Microservices, APIs, and cloud-native design.
-- [] **701.3 Source Code Management:** Advanced Git usage, branching strategies, and repository management.
+- [x] **701.2 Standard Components and Platforms:** Microservices, APIs, and cloud-native design.
+- [x] **701.3 Source Code Management:** Advanced Git usage, branching strategies, and repository management.
 - [] **701.4 Continuous Integration and Continuous Delivery:** Building pipelines and automated testing.
 
 ### Topic 702: Container Management
