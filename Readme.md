@@ -14,29 +14,26 @@ The goal of this project is to:
 ## 📚 LPI DevOps Tools Engineer (701-100) Exam Objectives
 
 ### Topic 701: Software Engineering
-* **701.1 Modern Software Development:** Concepts of Agile, Lean, and CI/CD.
-* **701.2 Standard Components and Platforms:** Microservices, APIs, and cloud-native design.
-* **701.3 Source Code Management:** Advanced Git usage, branching strategies, and repository management.
-* **701.4 Continuous Integration and Continuous Delivery:** Building pipelines and automated testing.
+[] **701.1 Modern Software Development:** Concepts of Agile, Lean, and CI/CD.
+[] **701.2 Standard Components and Platforms:** Microservices, APIs, and cloud-native design.
+[] **701.3 Source Code Management:** Advanced Git usage, branching strategies, and repository management.
+[] **701.4 Continuous Integration and Continuous Delivery:** Building pipelines and automated testing.
 
 ### Topic 702: Container Management
-* **702.1 Container Usage:** Docker fundamentals, image creation, and registry management.
-* **702.2 Container Orchestration:** Kubernetes basics and container networking.
-* **702.3 Container Infrastructure:** Storage and security for containerized environments.
+[] **702.1 Container Usage:** Docker fundamentals, image creation, and registry management.
+[] **702.2 Container Orchestration:** Kubernetes basics and container networking.
+[] **702.3 Container Infrastructure:** Storage and security for containerized environments.
 
 ### Topic 703: Machine Management
-* **703.1 Virtualization:** Managing VMs and Vagrant.
-* **703.2 Cloud Computing:** IaaS, PaaS, and SaaS concepts.
-* **703.3 Configuration Management:** Ansible, Chef, or Puppet automation.
+[] **703.1 Virtualization:** Managing VMs and Vagrant.
+[] **703.2 Cloud Computing:** IaaS, PaaS, and SaaS concepts.
+[] **703.3 Configuration Management:** Ansible, Chef, or Puppet automation.
 
 ### Topic 704: Service Operations
-* **704.1 Monitoring and Logging:** Prometheus, Grafana, and ELK stack.
-* **704.2 Log Management:** Centralized logging and analysis.
+[] **704.1 Monitoring and Logging:** Prometheus, Grafana, and ELK stack.
+[] **704.2 Log Management:** Centralized logging and analysis.
 
 ---
 
 ## 🛠 Skills Practiced in this Repo
 - [x] Local and Remote Repo Synchronization
-- [x] Branch Tracking and Management (`git branch -vv`)
-- [ ] Automated Build Pipelines
-- [ ] Dockerizing Sample Middleware
