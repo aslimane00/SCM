@@ -14,7 +14,7 @@ The goal of this project is to:
 ## 📚 LPI DevOps Tools Engineer (701-100) Exam Objectives
 
 ### Topic 701: Software Engineering
-- [] **701.1 Modern Software Development:** Concepts of Agile, Lean, and CI/CD.
+- [x] **701.1 Modern Software Development:** Concepts of Agile, Lean, and CI/CD.
 - [] **701.2 Standard Components and Platforms:** Microservices, APIs, and cloud-native design.
 - [] **701.3 Source Code Management:** Advanced Git usage, branching strategies, and repository management.
 - [] **701.4 Continuous Integration and Continuous Delivery:** Building pipelines and automated testing.
