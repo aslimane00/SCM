@@ -94,3 +94,32 @@ git config --get-regexp alias
 # git st
 # git lg
 ```
+# 7. Git Rebase: Linear History & Cleanup
+Rebasing is the process of moving or combining a sequence of commits to a new base commit. In DevOps, this is used to keep a "clean" history without unnecessary merge commits.
+
+* The Standard Rebase (Catching up with Main)
+Use this when you are working on a feature branch and main has moved forward. It "replays" your work on top of the latest version of main.
+```
+# While on your feature branch:
+git fetch origin
+git rebase origin/main
+
+# If there are conflicts:
+# 1. Fix the files
+# 2. git add <fixed-files>
+# 3. git rebase --continue
+```
+* Interactive Rebase (Commit Cleanup)
+Essential for cleaning up your commit history (squashing "fixup" commits) before pushing to a shared repository.
+```
+# Clean up the last 3 commits
+git rebase -i HEAD~3
+```
+* The Golden Rule of Rebase
+Stop! Never rebase a branch that you have already pushed to a public repository and that other people are working on. You will break their local history and cause a "diverged branch" nightmare.
+
+Efficiency Shortcut
+```
+# Pull changes from remote and rebase your local work on top automatically
+git pull --rebase origin main
+```
