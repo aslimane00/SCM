@@ -16,6 +16,9 @@ git config --global core.autocrlf input
 # UI and Pruning
 git config --global color.ui auto
 git config --global fetch.prune true
+
+#chek all configuration
+git config --list
 ```
 # 2. The Core Workflow
 The standard loop for local development and GitHub synchronization.
@@ -60,6 +63,8 @@ git stash pop
 # View a clean, graphical history
 git log --oneline --graph --decorate --all
 
+#Displays the differences between the working directory and the staging area.
+git diff
 # Inspect a specific file's history
 git blame filename.conf
 ```
@@ -82,6 +87,8 @@ git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.br "branch -vv"
 git config --global alias.lg "log --oneline --graph --decorate"
+# list all created aliases
+git config --get-regexp alias
 
 # Usage examples:
 # git st
