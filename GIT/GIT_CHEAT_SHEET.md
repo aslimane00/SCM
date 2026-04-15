@@ -123,3 +123,11 @@ Efficiency Shortcut
 # Pull changes from remote and rebase your local work on top automatically
 git pull --rebase origin main
 ```
+
+* Using cherry-pick (git cherry-pick):
+
+#Applies the changes introduced by <commit-hash> to the current branch.
+`git cherry-pick <commit-hash>`
+
+#Applies all commits from \<commit-hash1> to \<commit-hash2> to the current branch, excluding \<commit-hash1>.
+`git cherry-pick <commit-hash1>..<commit-hash2>`
