@@ -51,6 +51,10 @@ git merge feature/api-setup
 
 # Delete a branch (after merging)
 git branch -d feature/api-setup
+
+#Deletes the specified branch from the remote repository
+`git push \<remote-name> --delete \<branch-name>`
+
 ```
 # 4. Maintenance & "Save My Work"
 Essential for middleware administration and debugging.
@@ -58,7 +62,9 @@ Essential for middleware administration and debugging.
 # Temporarily hide changes to switch tasks
 git stash push -m "Debugging JBoss issue"
 git stash list
-git stash pop
+git stash pop <stash@{n}>
+git stash apply <stash@{n}>
+
 
 # View a clean, graphical history
 git log --oneline --graph --decorate --all
@@ -73,7 +79,7 @@ Standard DevOps "break-glass" commands.
 * Undo last commit (keep files)
 `git reset --soft HEAD~1`
 * Undo last commit (delete files)
-`Undo last commit (delete files)`
+`git reset --hard \<commit-hash>`
 * Fix the last commit message
 `git commit --amend`
 * Safe undo on public repo
@@ -118,16 +124,34 @@ git rebase -i HEAD~3
 * The Golden Rule of Rebase
 Stop! Never rebase a branch that you have already pushed to a public repository and that other people are working on. You will break their local history and cause a "diverged branch" nightmare.
 
-Efficiency Shortcut
+# 8. Efficiency Shortcut
 ```
 # Pull changes from remote and rebase your local work on top automatically
 git pull --rebase origin main
 ```
 
-* Using cherry-pick (git cherry-pick):
+# 9. Using cherry-pick (git cherry-pick):
 
 #Applies the changes introduced by <commit-hash> to the current branch.
 `git cherry-pick <commit-hash>`
 
 #Applies all commits from \<commit-hash1> to \<commit-hash2> to the current branch, excluding \<commit-hash1>.
 `git cherry-pick <commit-hash1>..<commit-hash2>`
+
+# 10. Deleting/cleaning git repository
+
+#Deletes the specified file from the working directory and stages the deletion so that it will be committed.\
+`git rm <file-name>`
+
+#Removes the file from the staging area but keeps the file in the working directory.\
+`git rm --cached <file-name>`
+
+#Lists all the untracked files and directories that would be deleted if git clean commands are used\
+`git clean -n`
+
+#Deletes untracked files from the working directory\
+`git clean -f (-d for directory)`
+
+#Deletes all untracked files, including those listed in the file .gitignore.\
+`git clean -fx`
+
