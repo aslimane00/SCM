@@ -155,3 +155,58 @@ git pull --rebase origin main
 #Deletes all untracked files, including those listed in the file .gitignore.\
 `git clean -fx`
 
+# 11. Using git tags 
+#Displays a list of all the existing tags in the repository.
+`git tag`
+
+#Creates a new tag for the latest commit o for a specific hash
+`git tag <tag-name> (<commit-hash>)`
+
+#Creates a tag with some additional message. Annotated tags
+include metadata like the tagger’s name, email, and date.
+`git tag -a <tag-name> (<commit-hash>) -m "message"`
+
+#Deletes the specified tag from the local Git repository
+`git tag -d <tag-name>`
+
+# 12 Exploring Repository History
+
+#Displays a simplified view of the commit history of the current branch with only the commit hash and message, one line per commit.
+`git log --oneline`
+
+#Displays the commit history for the specified file in the current branch.
+`git log <file-path>`
+
+#This includes the differences (called a patch) introduced by each commit in the commit history
+`git log -p`
+
+#Provides a summary of changes in each commit, including file changes and line counts
+`git log --stat`
+
+#Displays the reference logs (reflogs) for the current branch. Each log includes an index, the commit hash, and a message describing the change.
+`git reflog`
+
+#Displays the reflog entries for the specified branch.
+`git reflog <branch-name>`
+
+#Displays a specific entry from the reflog. Replace ref with the reference (e.g., HEAD) and n with the entry number.
+`git reflog show ref@{n}`
+
+#Shows who last modified each line of the specified file.
+`git blame <file> (<commit>)`
+
+#Shows the blame information for a specific range of lines in a file
+`git blame -L <start>,<end> <file>`
+
+#Shows more comprehensive blame information like full commit
+messages
+`git blame -p <file>`
+
+#Initiates a binary search to pinpoint the commit that introduced a change or a bug. Next, the search range must be specified by marking two commits as good and bad
+```
+git bisect start
+git bisect bad OR git bisect bad <commit-hash>
+git bisect good <commit-hash>
+git bisect status
+git bisect reset
+```
