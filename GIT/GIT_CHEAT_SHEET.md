@@ -76,13 +76,13 @@ git blame filename.conf
 ```
 # 5. Recovery & Undoing
 Standard DevOps "break-glass" commands.
-* Undo last commit (keep files)
+* Undo last commit (keep files)\
 `git reset --soft HEAD~1`
-* Undo last commit (delete files)
+* Undo last commit (delete files)\
 `git reset --hard \<commit-hash>`
-* Fix the last commit message
+* Fix the last commit message\
 `git commit --amend`
-* Safe undo on public repo
+* Safe undo on public repo\
 `git revert <commit-id>`
 
 # 6. Time-Saving Aliases
@@ -132,10 +132,10 @@ git pull --rebase origin main
 
 # 9. Using cherry-pick (git cherry-pick):
 
-#Applies the changes introduced by <commit-hash> to the current branch.
+#Applies the changes introduced by <commit-hash> to the current branch.\
 `git cherry-pick <commit-hash>`
 
-#Applies all commits from \<commit-hash1> to \<commit-hash2> to the current branch, excluding \<commit-hash1>.
+#Applies all commits from \<commit-hash1> to \<commit-hash2> to the current branch, excluding \<commit-hash1>.\
 `git cherry-pick <commit-hash1>..<commit-hash2>`
 
 # 10. Deleting/cleaning git repository
@@ -163,43 +163,43 @@ git pull --rebase origin main
 `git tag <tag-name> (<commit-hash>)`
 
 #Creates a tag with some additional message. Annotated tags
-include metadata like the tagger’s name, email, and date.
+include metadata like the tagger’s name, email, and date.\
 `git tag -a <tag-name> (<commit-hash>) -m "message"`
 
-#Deletes the specified tag from the local Git repository
+#Deletes the specified tag from the local Git repository\
 `git tag -d <tag-name>`
 
 # 12 Exploring Repository History
 
-#Displays a simplified view of the commit history of the current branch with only the commit hash and message, one line per commit.
+#Displays a simplified view of the commit history of the current branch with only the commit hash and message, one line per commit.\
 `git log --oneline`
 
-#Displays the commit history for the specified file in the current branch.
+#Displays the commit history for the specified file in the current branch.\
 `git log <file-path>`
 
-#This includes the differences (called a patch) introduced by each commit in the commit history
+#This includes the differences (called a patch) introduced by each commit in the commit history\
 `git log -p`
 
-#Provides a summary of changes in each commit, including file changes and line counts
+#Provides a summary of changes in each commit, including file changes and line counts\
 `git log --stat`
 
-#Displays the reference logs (reflogs) for the current branch. Each log includes an index, the commit hash, and a message describing the change.
+#Displays the reference logs (reflogs) for the current branch. Each log includes an index, the commit hash, and a message describing the change.\
 `git reflog`
 
-#Displays the reflog entries for the specified branch.
+#Displays the reflog entries for the specified branch.\
 `git reflog <branch-name>`
 
-#Displays a specific entry from the reflog. Replace ref with the reference (e.g., HEAD) and n with the entry number.
+#Displays a specific entry from the reflog. Replace ref with the reference (e.g., HEAD) and n with the entry number.\
 `git reflog show ref@{n}`
 
-#Shows who last modified each line of the specified file.
+#Shows who last modified each line of the specified file.\
 `git blame <file> (<commit>)`
 
-#Shows the blame information for a specific range of lines in a file
+#Shows the blame information for a specific range of lines in a file\
 `git blame -L <start>,<end> <file>`
 
 #Shows more comprehensive blame information like full commit
-messages
+messages\
 `git blame -p <file>`
 
 #Initiates a binary search to pinpoint the commit that introduced a change or a bug. Next, the search range must be specified by marking two commits as good and bad
