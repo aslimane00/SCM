@@ -1,0 +1,52 @@
+{
+  "cluster": {
+    "name": "edge-prod-1",
+    "region": "eu-west-1",
+    "serviceDiscovery": {
+      "type": "consul",
+      "endpoint": "consul.service.consul:8500",
+      "enabled": true
+    },
+    "controlPlane": {
+      "apiServer": "https://10.0.0.10:6443"
+    },
+    "nodes": [
+      {
+        "name": "cp-01",
+        "role": "control-plane",
+        "status": "Ready",
+        "zone": "eu-west-1a",
+        "services": [
+          { "name": "etcd", "port": 2379 },
+          { "name": "api-server", "port": 6443 }
+        ]
+      },
+      {
+        "name": "worker-01",
+        "role": "worker",
+        "status": "Ready",
+        "zone": "eu-west-1a",
+        "services": [
+          { "name": "orders", "port": 8080 },
+          { "name": "payments", "port": 8081 }
+        ]
+      },
+      {
+        "name": "worker-02",
+        "role": "worker",
+        "status": "NotReady",
+        "zone": "eu-west-1b",
+        "services": [
+          { "name": "inventory", "port": 8090 }
+        ]
+      }
+    ],
+    "middleware": {
+      "protocols": ["REST", "gRPC"],
+      "serviceMesh": {
+        "enabled": true,
+        "mtls": "STRICT"
+      }
+    }
+  }
+}
