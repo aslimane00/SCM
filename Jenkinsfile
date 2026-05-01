@@ -1,6 +1,8 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.9.15-eclipse-temurin-21-alpine' } }
+    agent { docker { image 'maven:3.9.15-eclipse-temurin-21-alpine'
+        // Add the --init flag to handle process signals correctly
+            args '-u root --init' } }
     stages {
         stage('build') {
             steps {
